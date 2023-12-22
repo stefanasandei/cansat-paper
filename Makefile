@@ -11,7 +11,7 @@ $(BUILD_DIR):
 
 # Target to compile the LaTeX document into the build directory
 compile: $(BUILD_DIR)
-	cd $(SRC_DIR) && pdflatex -output-directory=$(BUILD_DIR) $(TEX_FILE)
+	cd $(SRC_DIR) && pdflatex -output-directory=../$(BUILD_DIR) $(TEX_FILE)
 
 # Clean target to remove generated files
 clean:
