@@ -1,8 +1,10 @@
 \documentclass[11pt]{article}
-\usepackage{ROSPINCanSat, lipsum}
+\usepackage{ROSPINCanSat, multicol, graphicx, float, tabularx}
+\graphicspath{ {./images/} }
+
 \cansatstyle
 
-\title{Preliminary Report
+\title{Guidelines for the Preliminary Report
 
 And Design Document
 }
@@ -18,83 +20,30 @@ And Design Document
 
 \newpage
 
-% First section
 \section{Introduction}
-% Write the introduction text here
-hello world we are lunateeks
 
-\subsection{Purpose of the mission}
-% Here comes the content regardin the purpose of the mission.
+\input{chapters/introduction}
 
-\subsection{Team organisation and roles}
-% Here comes the team organisation and roles description content.
+\section{Payload description}
 
-\subsection{Mission objectives}
-% Here comes the text regarding the mission objectives.
+\input{chapters/payload-description}
 
+\section{Rocket description}
 
-% 2nd section
-\section{CanSat description}
-% Write the CanSat description text here
+\input{chapters/rocket-description}
 
-\subsection{Mission overview}
-% Here comes the text regarding the mission overview.
-
-\subsection{Mechanical / structural design}
-% Here comes the text regarding the mechanical and structural design.
-
-\subsection{Electrical design}
-% Here comes the text regarding the electrical design.
-
-\subsection{Software design}
-% Here comes the text regarding the software design.
-
-\subsection{Recovery system}
-% Here comes the text regarding the recovery system.
-
-\subsection{Ground support equipment}
-% Here comes the text regarding the ground support equipment.
-
-% 3rd section
 \section{Project planning}
-% Write about the project planning here
 
-\subsection{Time schedule of the CanSat preparation}
-% Here comes the text regarding the time schedule.
+\input{chapters/project-planning}
 
-\subsection{Resource estimation}
-% Here comes the text regarding the resource estimation.
-
-\subsubsection{Budget}
-% Here comes the text regarding the budget.
-
-\subsubsection{External support}
-% Here comes the text regarding the external support.
-
-\subsection{Test plan}
-% Here comes the text regarding the test plan.
-
-\subsection{Time management}
-% Here comes the text regarding the time management.
-
-% 4th section
 \section{Data analysis and outreach}
-% Here comes data analysis and outreach content.
 
-\subsection{Data Analysis Plan}
-% Here comes the text regarding the data analisys plan..
+\input{chapters/data-analysis-and-outreach}
 
-\subsection{Outreach Program}
-% Here comes the text regarding the outreach program.
-
-% 5th section
 \section{Conclusion}
-% Here comes the conclusion content.
 
-\subsection{Summary of the PDR}
-% Here comes the summary for the PDR
+\input{chapters/conclusion}
 
-\subsection{Recommendations for next steps}
-% Here comnes the recomandations for the next phase/steps
+\input{chapters/references}
 
 \end{document}

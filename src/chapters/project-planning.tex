@@ -1,0 +1,148 @@
+\subsection{Time schedule of the Payload preparation}
+
+As the Rocketry mission is a highly detailed experiment, our team provides the following time schedule that needs to be followed to ensure that the mission is conducted smoothly, including the key tasks and activities to be carried out, as well as clearly outlining the expected outcomes for each phase:
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textbf{Task} & \textbf{Timeline} \\ \hline
+Define and establish mission objectives and requirements & Dec 29th \\ \hline
+Develop and submit the Preliminary Design Review & Jan 1st - Jan 14th \\ \hline
+Design Payload and rocket model structure & Jan 1st - Jan 14th \\ \hline
+Develop software and electric design & Jan 1st - Jan 14th \\ \hline
+% Receive feedback on PDR & Jan 21st \\ \hline
+% Analyse feedback and correct errors/improve design & Jan 21st - Feb 4th \\ \hline
+Develop and submit the Critical Design Review & Feb 4th - Feb 25th \\  \hline
+Order components and build payload (and prototypes) & May 3rd - Apr 28th \\ \hline
+Conduct tests on prototypes, adjust and refine payload & May 3rd - Apr 28th \\ \hline
+Organise presentations, workshops, demonstration & May 3rd - Apr 28th \\ \hline
+Develop Flight Readiness Review & May 3rd - Apr 28th \\ \hline
+Undergo pre-launch activities (PowerPoint Presentation of the project, the Rocketry Poster) & Apr 28th - May 17th \\ \hline
+Construct Rocket model & May 17th \\ \hline
+Launch Rocket model & May 18th \\ \hline
+Analyse flight and mission data and develop Mission Final Report & May 17th - May 19th \\ \hline
+\end{tabularx}
+\end{table}
+
+Moreover, to ensure that the mission stays on schedule and within budget, we have taken into account the following potential risks that may come up:
+
+\begin{itemize}
+
+    \item Risk 1: Delays in obtaining materials
+    \par Mitigation: Place orders for materials well in advance
+    \item Risk 2: Unforeseen technical difficulties
+    \par Mitigation: Allow extra time for testing and troubleshooting
+    \item Risk 3: Unavailability of test sites
+    \par Mitigation: Conduct tests using our own resources, be it for space, equipment, etc.
+    \item Risk 4: Team members' possible poor time management
+    \par Mitigation: Set an internal team deadline one week early, to ensure there is time for careful adjustments
+    \item Risk 5: Materials, equipment, and transportation fees pass the budget limit
+    \par Mitigation: Constrict our budget to less than the actual limit, so that, if necessary, we have an extra budget to use
+
+\end{itemize}
+
+Finally, in the following section, we will outline the resources required for each phase and task. It is also important to note that the schedule may change as the project progresses, therefore we will update it regularly to reflect the current status of the mission and any changes that may have been made to the plan.
+
+\subsection{Resource estimation}
+
+It is especially important to keep in mind that this is only an estimate and that, this early in the project, it is impossible to know exactly what components we might use, where we might purchase them, and at what cost or whether we will actually have the opportunity to complete this project up until the actual launch phase.
+
+\subsubsection{Budget}
+
+The table below lists all the foreseen costs for the Rocketry mission. The costs include the components used for the Payload, as well as any additional materials, equipment.
+
+\begin{table}[H]
+\centering
+\begin{tabularx}{\textwidth}{|X|X|}
+\hline
+\textbf{Component} & \textbf{Cost} \\ \hline
+Arduino UNO R3 & 40 USD \\
+APC220 & 10 USD \\
+MPU6050 & 11 - 36 USD \\
+NEO-6M & 8 USD \\ \hline
+\textbf{Total budget} & 69 - 94 USD (312.91 - 426.28 RON) \\ \hline
+\end{tabularx}
+\end{table}
+
+\subsubsection{External support}
+
+Our team does not foresee the need for any external support for the development of the Payload. However, we plan to collaborate with the schools, clubs, and organizations mentioned in section 5.2 for the Outreach Program of our project. These are possibly the following:
+
+\begin{itemize}
+
+\item National College Iasi \& National College “Emil Racovita” Iasi - our team members' schools, where we intend to give presentations and/or organize workshops
+\item The Iasi Astroclub, and Iasi Space Network - local astronomical communities, where we plan to give presentations and/or organize workshops
+\item Cyliis and Peppers robotics clubs - with the help of which we plan to organize workshops
+\item “Grigore C. Moisil” Computer Science High School of Iasi, National College Costache Negruzzi Iasi, etc. - community engagement
+
+\end{itemize}
+
+\subsection{Test plan}
+
+To ensure the quality of the rocket and the behavior of the materials, four tests shall be conducted. Those tests are thought to analyze the structural integrity, as well as the performance of the electrical systems in the payload. [5]
+% todo: ref
+
+\begin{enumerate}
+
+\item Testing of the components
+    \begin{enumerate}
+        \item Testing of each sensor - to ensure they are working and not damaged; this test is done by connecting each of them, separately, to a battery.
+            \begin{itemize}
+                \item Arduino UNO R3
+                \item APC220
+                \item MPU6050
+                \item NEO-6M
+                \item LM35DZ
+                \item BMP085
+            \end{itemize}
+        \item Testing of the entire electrical system - to ensure the wires are fixed properly.
+    \end{enumerate}
+\item Drop test
+    - The first of the four tests is supposed to verify that the parachute is working properly and to ensure the components are mounted correctly. The test is predicted to generate about 50Gs of shock to the system.
+    \begin{enumerate}
+        \item Description - The rocket body is attached by the upper part of the parachute to a 1 metre-long non-stretching cord which is mounted to a solid structure, such as a ceiling, by an eyebolt strong enough to support the shock caused by the drop. The last mentioned structure is supposed to be tall enough for the rocket to not hit the ground when the parachute and the cord are extended to the maximum.
+        \item Procedure - Turning on the power on the electrical components. Verifying the communications and the stats. Raising the rocket to the specified height and mounting it. Releasing the system. Ensure the power wasn't lost. Inspect the rocket for any damages to the electrical system and other parts. Verify the communications are still working.
+    \end{enumerate}
+\item Thermal Test
+    - This test is supposed to ensure the rocket can work in a hotter environment that can be caused by overheating, air friction, low thermal conductivity of the non-electric materials, etc. The parts that are analyzed in this test are the electrical system and the behavior of the materials and glues. 
+    \begin{enumerate}
+        \item Description - The test can be done by heating the rocket to 70C for 2 hours in a heating chamber, such as an oven on the Leavening function, at the specified temperature. Also, a remote thermometer is needed to measure the internal temperature of the rocket.
+        \item Procedure - Turn on the electrical system. Place the rocket into the oven. Turn on the oven. Modify the temperature of the oven during the 2 hours of the experiment so that the internal temperature is maintained at 65-70C. After 2 hours, turn off the oven and take out the rocket. Perform visual inspection and functional tests to ensure the rocket survived the extreme conditions and is still operating in the expected parameters. Verify the integrity of the structure and the glued components are not affected. 
+    \end{enumerate}
+\item Vibration test
+    - This test simulates the turbulence the rocket might meet in its journey and ensures the structural integrity of the components. The vibrations might unscrew the screws, as well as unmount some of the components.
+    \begin{enumerate}
+        \item Description - We can use a massage gun at various intensities to simulate the movement of the rocket. Depending on the model, this can generate around 60Hz.
+        \item Procedure - Power on the rocket. Verify data is being transmitted. Power on the massage gun. Place the machine gun on the rocket and keep it for 1 minute in the same place, then change its position and repeat. Stop the massage gun. Inspect the rocket for functionality and structure alteration. Verify the data is still being collected. Power down the rocket.
+    \end{enumerate}
+
+\end{enumerate}
+
+\subsection{Time management}
+
+The Rocket mission has a tight time schedule that needs to be followed to ensure that the mission is completed within the given timeframe. Below is a detailed structure of the timeline, highlighting the key tasks and activities that need to be completed:
+
+\begin{itemize}
+    \item Design phase: Jan 1st - Feb 15th
+        \begin{itemize}
+            \item Define mission objectives and requirements
+            \item Design Rocket structure and systems
+            \item Develop software
+        \end{itemize}
+    \item Prototyping phase: Feb 16th - Mar 31st
+        \begin{itemize}
+            \item Build and test prototypes
+            \item Evaluate and refine the design
+        \end{itemize}
+    \item Construction phase: April 1st - May 15th
+        \begin{itemize}
+            \item Construct final Rocket
+            \item Perform final testing
+        \end{itemize}
+    \item Launch phase: May 16th - May 31st
+        \begin{itemize}
+            \item Prepare for launch
+            \item Launch Rocket
+        \end{itemize}
+\end{itemize}
