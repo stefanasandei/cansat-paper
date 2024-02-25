@@ -1,11 +1,12 @@
-# RCRC Preliminary Design Report
+# RCRC Critical Design Report
 
-This is the PDR, of the team Lunateeks, for the 2023-2024 edition of the
+This is the CDR, of the team Lunateeks, for the 2023-2024 edition of the
 Romanian Cansat and Rocketry Competition.
 
 ## Usage
 
-This project uses `GNU Make` to build the document. To generate the PDF, run the command: 
+This project uses `GNU Make` to build the document. To generate the PDF, run the
+command:
 
 ```
 make

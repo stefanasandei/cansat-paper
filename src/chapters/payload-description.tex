@@ -1,23 +1,23 @@
 \subsection{Mission overview}
 
-The mission will consist of designing and building the rocket, the launch taking place in Bucharest, in which the rocket will be deployed, reaching, at the end of the ascent, a height of approximately 80m. During both the ascent and the descent, the sensors present in the rocket will measure the altitude, pressure, temperature, and acceleration, and through the GPS sensor, the information will be sent back and analysed.
+The mission will consist of designing and building the rocket, the launch taking place in Bucharest, in which the rocket will be deployed, reaching, at the end of the ascent, a height of approximately 256m. During both the ascent and the descent, the sensors present in the rocket will measure the altitude, pressure, temperature, and acceleration, and through the GPS sensor, the information will be sent back and analysed. 
 
 \subsection{Mechanical / structural design}
 
-In this section, we will provide a detailed description of the rocket model's mechanical design and the materials used for its structure, as well as the reasoning behind these choices. It also identifies the major components of the Payload, including the main board, sensors, transmitter, and battery, which will be detailed further in section 2.3. That subchapter will likewise include a preliminary drawing of how the Payload structure will look, where the major components will be placed, a list of sensors used, an explanation of the purposes of each component, and how they interact to accomplish our mission's objectives.
+In this section, we will provide a detailed description of the rocket model’s mechanical design and the materials used for its structure, as well as the reasoning behind these choices. It also identifies the major components of the Payload, including the main board, sensors, transmitter, and battery, which will be detailed further in section 2.3. That subchapter will likewise include a preliminary drawing of how the Payload structure will look, where the major components will be placed, a list of sensors used, an explanation of the purposes of each component, and how they interact to accomplish our mission’s objectives.
 
 \subsubsection{Mechanical Design}
 
-The Rocket model structure is made of PLA, which provides strength and durability while keeping the overall weight of the Rocket model low. The structure has been designed to withstand the stress of launch and landing and includes a removable top for easy access to the interior components. The four fin sets are made out of balsa wood, for its lightweight, but structurally durable properties. The internal elements that need to withstand a greater force, such as the engine block, will be made of PLA, while the rest will be made of cardboard, for it is cheap and light. The components are mounted to the structure using screws and standoffs to provide a secure and stable platform for the electronic components, as well as relying on a tight and snug placement and bonding glues.
+The Rocket model structure is made of PLA and Acrylic, which provide strength and durability while keeping the overall weight of the Rocket model low. The structure has been designed to withstand the stress of launch and landing and includes a removable top for easy access to the interior components. The four fin sets are made out of balsa wood, for its lightweight, but structurally durable properties. The internal elements that need to withstand a greater force, such as the engine block, will be made of PLA, while the rest will be made of cardboard, for it is cheap and light. The components are mounted to the structure using screws and standoffs to provide a secure and stable platform for the electronic components, as well as relying on a tight and snug placement and bonding glues.
 
 \subsubsection{Components}
 
-The major components of the Payload include the main board, sensors, transmitter, and battery. The main board houses the microcontroller and provides the interface between the sensors and the transmitter. The sensors include a temperature sensor, a pressure sensor, and an altitude sensor. The transmitter is used to send data back to the ground station. The battery provides power to the Payload during the flight. The rocket model is composed of the following elements:
+The major components of the Payload include the main board, sensors, transmitter, and battery. The main board houses the microcontroller and provides the interface between the sensors and the transmitter. The sensors include a temperature sensor, a pressure sensor, and an altitude sensor. The transmitter is used to send data back to the ground station. The battery provides power to the Payload during the flight.
 
 \begin{itemize}
     \item Nose Cone - with the shape of a tangent ogive
     \item Payload module - further described in chapter 2.3.
-    \item Extra weight (optional)
+    \item Extra weight 10g
     \item Body tube - cylindrical
     \item Shock-Cord
     \item Parachute
@@ -32,15 +32,17 @@ The major components of the Payload include the main board, sensors, transmitter
 
 \subsubsection{Placement}
 
-The Payload is mounted inside the nose cone, with the sensors and transmitter located in its structure. The battery is mounted to the bottom of the structure. The motor is placed in the lower part of the body tube, fixed by the inner tube and the centering rings. The engine block keeps the motor in place, being on top of it, and the bulkhead is placed over them, protecting the recovery system. On the side of the body tube we can find the launch lugs. The shoulder connects the body tube and the cone, the latter housing the Payload, and the former containing the parachute and shock-cord.
+The Payload with the battery is placed inside the nose cone, with the sensors and transmitter located in its structure. The radio antenna will be placed in a way that allows it to communicate with the ground station, not being obscured by any other components after the release. The motor is placed in the lower part of the body tube, fixed by the inner tube and the centering rings. The engine block keeps the motor in place, being on top of it, and the bulkhead is placed over it, protecting the recovery system. On the side of the body tube we can find the launch lugs. The shoulder connects the body tube and the cone, the latter housing the Payload and its parachute, and the former containing the parachute and shock cord.
 
 \subsubsection{Explanation}
 
-The nose cone has the shape of a tangent ogive in order to be as aerodynamic as possible, thereby reducing air resistance. To ensure the stability of our rocket model, we might opt to add an extra weight in the cone, if the payload module doesn’t turn out to be heavy enough. The body tube will be made out of PLA or cardboard, because we want to use a lightweight material that can also withstand the stress of launch and flight with high durability. The parachute will be made out of nylon, given that it is very thin, but resistant to shock and high forces, while the lines will be from braided nylon, and it will be tethered to the rocket model via an elastic shock-cord. The bulkhead and engine block will be made of PLA, given that they need to withstand high shock forces. The inner tube will be from PLA, covering the motor, whereas the centering rings and launch lugs will be resistant enough being made from cardboard, given its structural properties.
+The nose cone has the shape of a tangent ogive in order to be as aerodynamic as possible, thereby reducing air resistance. To ensure the stability of our rocket model, we might opt to add an extra weight in the cone, if the payload module doesn’t turn out to be heavy enough. The body tube will be made out of cardboard because we want to use a lightweight material that can also withstand the stress of launch and flight with high durability. The parachutes will be made out of Polyethylene, given that it is very thin, but resistant to shock and high forces, while the lines will be from braided nylon, and it will be tethered to the rocket model via an elastic shock cord. The bulkhead and engine block will be made of PLA, given that they need to withstand high shock forces. The inner tube will be from PLA, covering the motor, whereas the centering rings and launch lugs will be resistant enough to be made from cardboard, given its structural properties.
 
 \subsection{Electrical design}
 
-\subsubsection{Electrical Interface}
+In this chapter we will present the exact details about the electrical design of the payload, including all the necessary components (controller and sensors) and how they will be connected. The power consumption of all the equipment will also be calculated, so that the perfect battery can be chosen. 
+
+\subsection{Electrical interface}
 
 The electrical interface has two main objectives: data collection and data transmission. The microcontroller used is an Arduino UNO R3, chosen for its convenient size and connectivity options. There is also an APC220 radio transmitter connected to the main board. All of this is powered by a 9V battery. There are 4 sensors connected to it:
 
@@ -51,7 +53,7 @@ The electrical interface has two main objectives: data collection and data trans
     \item BMP085 (atmospheric pressure)
 \end{itemize}
 
-Below is a scheme describing how all of these components come together:
+Additionally, there is also an APC220 radio transmitter connected to the main board. All of this is powered by a 9V battery. Below is a scheme describing how all of these components come together:
 
 \begin{figure}[H]
 \centering
@@ -61,7 +63,7 @@ Below is a scheme describing how all of these components come together:
 
 \subsubsection{Radio Communication}
 
-As we mentioned, we are using an APC220 for radio communication. This is for a couple of reasons, most importantly being its maximum transmission range: 1200 metres. We can also buy a second APC220 with an USB adaptor and connect it to our laptop, from the ground. We chose radio as our transmission method over wifi (via an ESP32), which has an inferior range of 200 metres. Internet transmission had the advantage of allowing us to use a more powerful protocol such as MQTT, a standard in IoT messaging. With our actual radio transmission, the CanSat computer sends a continuous stream of binary data, coupled with an error detection algorithm (Cyclic Redundancy Check), to ensure data integrity.
+As we mentioned, we are using an APC220 for radio communication. This is for a couple of reasons, most importantly being its maximum transmission range: 1200 metres. We can also buy a second APC220 with a USB adaptor and connect it to our laptop, from the ground. We chose radio as our transmission method over wifi (via an ESP32), which has an inferior range of 200 metres. Internet transmission had the advantage of allowing us to use a more powerful protocol such as MQTT, a standard in IoT messaging. With our actual radio transmission, the CanSat computer sends a continuous stream of binary data, coupled with an error detection algorithm (Cyclic Redundancy Check), to ensure data integrity.
 
 \subsubsection{Power Consumption}
 
@@ -94,7 +96,7 @@ The program flow can be seen in the following diagram:
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\linewidth]{program_flow}
+\includegraphics[width=0.9\linewidth]{flow_diagram}
 \caption{Program flow}
 \end{figure}
 
@@ -108,8 +110,12 @@ We are using an Arduino UNO as a microcontroller, which is powered by an ATmega3
 
 \subsection{Recovery system}
 
-The recovery system is a core part of our CanSat, as it is essential to recover our electronic components. Once the rocket has reached its maximum altitude and it enters its descent phase, a parachute is deployed to soften the landing. We can track our rocket thanks to its GPS. 
+Our rocket model will use a parachute with the diameter 417 mm for the recovery of the body tube and one with the diameter 217 mm for the recovery of the payload. For an optimum landing, we have chosen a cluster of two Aerotech D9-5 motors, both with a delay of 5 seconds. As it runs out of fuel, the rocket reaches its apogee, and, after the 5 second delay, the loose black powder in the motors will build pressure inside the body tube, pushing the nose cone out, since the shoulder will intentionally not be very tight, to allow the safe deployment of our payload and the two parachutes. Additionally, since we are using a cluster mount, we are reducing the risk of our motors failing to fire the ejection charge.
+
+After subsequent tests, we will determine whether the pressure is too high and we need to add vents, small holes in the body tube, in order to let some of the pressure out and avoid a strong explosion, which would damage the payload.
+
+Alternatively, if this method is deemed to be unsafe, too risky, or not efficient enough, we can deploy the payload and parachutes electronically, after our sensors indicate that apogee has been reached. [6]
 
 \subsection{Ground support equipment}
 
-The group equipment for the CanSat mission is composed of a laptop, with an APC220 radio receiver connected to it via an USB-C adaptor. The antenna is used to transmit and receive the data signals. The ground device has to respond with an acknowledgement (ACK) packet if the CRC checksum matches, so the CanSat knows there aren't any errors in the transmitted data and can move on sending more packets. Otherwise, if the checksum doesn't match, the receiver will reply with a negative acknowledgement (NACK) and the CanSat will send that packet again, hopefully without the same errors. More about the ground support device in the data analysis chapter.
+The group equipment for the CanSat mission is composed of a laptop, with an APC220 radio receiver connected to it via a USB-C adaptor. The antenna is used to transmit and receive the data signals. The ground device has to respond with an acknowledgment (ACK) packet if the CRC checksum matches, so the CanSat knows there aren’t any errors in the transmitted data and can move on sending more packets. Otherwise, if the checksum doesn’t match, the receiver will reply with a negative acknowledgement (NACK) and the CanSat will send that packet again, hopefully without the same errors. More about the ground support device in the data analysis chapter. 
